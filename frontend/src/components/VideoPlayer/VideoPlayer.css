@@ -1,0 +1,12 @@
+.desc {
+  width: 650px;
+  height: fit-content;
+  flex-wrap: wrap;
+  color: rgb(208, 198, 198);
+  text-shadow: rgb(55, 55, 55) 3px 3px 5px;
+  padding-top: 0.5em;
+}
+.player-container {
+  height: auto;
+  width: auto;
+}

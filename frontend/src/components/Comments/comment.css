@@ -1,0 +1,70 @@
+.comments-container {
+  max-width: 600px;
+}
+.form-container {
+  max-width: 450px;
+}
+.feed-container {
+  max-width: 450px;
+}
+.comment-form:hover {
+  opacity: 90%;
+}
+.comment-form {
+  border-color: grey;
+  min-height: 80px;
+  border-width: 2px;
+  border-radius: 5px;
+  border-style: outset;
+  padding: 4px;
+  opacity: 50%;
+  height: 116px;
+}
+textarea:hover {
+  cursor: text;
+}
+textarea[name="post"] {
+  resize: none;
+  width: 440px;
+  height: 5rem;
+  border-width: 2px;
+  border-radius: 5px;
+  border-style: outset;
+  padding: 4px;
+  padding-right: 50px;
+  vertical-align: bottom;
+}
+.post-button {
+  width: 30px;
+  color: midnightblue;
+  padding: 2px;
+  vertical-align: bottom;
+  height: 24px;
+  margin-top: 2px;
+  box-shadow: 1px 2px 5px rgb(151, 146, 141);
+  float: right;
+  position: static;
+}
+
+.comment-card {
+  box-sizing: border-box;
+  width: auto;
+  min-height: fit-content;
+  max-height: 10rem;
+  border-width: 2px;
+  border-radius: 5px;
+  border-style: outset;
+  background-color: rgb(69, 68, 68);
+  color: beige;
+  padding: 0.65rem;
+  padding-top: 0.5rem;
+  margin-top: 1rem;
+}
+.username {
+  opacity: 78%;
+  font-weight: lighter;
+}
+.comment-text {
+  padding-top: 3px;
+  font-weight: bold;
+}

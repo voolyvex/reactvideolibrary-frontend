@@ -1,0 +1,117 @@
+.search-page {
+  padding-left: auto;
+  margin-left: 5%;
+}
+.search-title {
+  width: 100%;
+  text-align: left;
+  margin: auto;
+  padding: auto;
+}
+.search-form-container {
+  display: inline;
+  line-height: 20px;
+  font-size: 22px;
+  text-align: left;
+}
+.search-form {
+  line-height: 20px;
+  padding-left: 1.5px;
+  border-radius: 1px;
+  border-style: hidden;
+  margin-bottom: 1px;
+}
+.search-button {
+  color: midnightblue;
+  line-height: 20px;
+  padding: 0%;
+  vertical-align: bottom;
+  padding-top: 1px;
+  height: 22px;
+  margin-left: 5px;
+  margin-top: 1px;
+  box-shadow: 1px 2px 5px rgb(151, 146, 141);
+}
+.search-button:hover {
+  color: white;
+}
+.search-feed {
+  max-width: 70%;
+  display: grid;
+  place-content: left;
+  text-align: left;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+  justify-content: space-around;
+  margin: 1rem;
+  padding: 1rem;
+  grid-auto-flow: row;
+}
+.item {
+  border: rgb(41, 51, 60);
+  border-style: outset;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 2px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 10px;
+  border-width: 3px;
+  box-shadow: rgb(41, 51, 60) 2px 3px 6px;
+  background: linear-gradient(
+    to top right,
+    silver,
+    rgb(59, 53, 53),
+    rgb(57, 55, 55),
+    rgb(64, 64, 64),
+    rgb(10, 58, 84),
+    black,
+    rgb(130, 177, 177),
+    black,
+    rgb(203, 154, 106)
+  );
+  background-color: rgb(121, 95, 105);
+  background-blend-mode: hue;
+  display: flex;
+  row-gap: 3px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  word-break: keep-all;
+  word-wrap: normal;
+  padding: 1rem;
+  color: #faf9f9;
+  min-height: 220px;
+  max-height: fit-content;
+  width: 324px;
+  text-align-last: left;
+  opacity: 75%;
+}
+.item:hover {
+  opacity: 98%;
+  background-blend-mode: saturation;
+}
+.icon {
+  color: rgb(223, 130, 36);
+}
+.rel-feed-container {
+  display: grid;
+  row-gap: 5px;
+}
+.rel-title {
+  font-variant-caps: titling-caps;
+  text-shadow: rgb(202, 154, 105) 1px 1px 3px;
+  text-align: left;
+  font-kerning: none;
+  font-size: x-large;
+  text-align: center;
+  opacity: 70%;
+  width: 320px;
+  padding: 4px;
+  margin-bottom: 2px;
+  border-width: 2px;
+  border-style: none;
+  color: #4682b4;
+  border-color: #4682b4;
+  border-bottom-left-radius: 28px;
+  border-top-right-radius: 10px;
+  background: linear-gradient(to bottom right, lightgrey, grey);
+}
