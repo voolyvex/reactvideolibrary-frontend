@@ -4,6 +4,7 @@ import "../SearchFeed/SearchFeed.css"
 import "./comment.css"
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { useParams } from 'react-router-dom';
+import { URL_HOST } from '../../urlHost';
 
 
 const PostUserCommentForm = () => {
@@ -19,7 +20,7 @@ const PostUserCommentForm = () => {
             "date_time": dateTime
         };
         try {
-            await axios.post("http://127.0.0.1:8000/api/comments/post/", newCommentObject, { headers: { Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}` } });
+            await axios.post(`${URL_HOST}/api/comments/post/`, newCommentObject, { headers: { Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}` } });
         } catch (error) {
             console.log(error)
         }
