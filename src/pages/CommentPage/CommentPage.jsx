@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import DisplayCommentFeed from "../../components/Comments/DisplayCommentFeed";
 import axios from "axios";
 import '../../components/Comments/comment.css'
+import { URL_HOST } from "../../urlHost";
 
 
 const CommentPage = () => {
@@ -17,7 +18,7 @@ const CommentPage = () => {
 
   async function getComments(id) {
     try {
-      await axios.get(`http://127.0.0.1:8000/api/comments/?video_id=${id}`).then(response => setComments(response.data))
+      await axios.get(`${URL_HOST}/api/comments/?video_id=${id}`).then(response => setComments(response.data))
 
     } catch (error) {
       console.log(error);
