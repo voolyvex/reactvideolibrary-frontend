@@ -7,25 +7,28 @@ import { useParams } from 'react-router-dom';
 import { URL_HOST } from '../../urlHost';
 
 
-const PostUserCommentForm = () => {
+const PostUserCommentForm = ({ getComments }) => {
     const { videoId } = useParams();
     const [text, setText] = useState("");
     const dateTime = new Date().toLocaleString()
 
     const postUserComment = async () => {
-        console.log(dateTime);
         let newCommentObject = {
             "video_id": videoId,
             "text": text,
             "date_time": dateTime
         };
         try {
-            await axios.post(`${URL_HOST}/api/comments/post/`, newCommentObject, { headers: { Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}` } });
+            let response = await axios.post(`${URL_HOST}/api/comments/post/`, newCommentObject, { headers: { Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}` } });
+            if (response.status === 201){
+                getComments(videoId)
+            }
         } catch (error) {
             console.log(error)
         }
     };
     const handleSubmit = (e) => {
+        e.preventDefault();
         postUserComment();
     }
     return (

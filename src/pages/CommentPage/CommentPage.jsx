@@ -28,7 +28,7 @@ const CommentPage = () => {
   return (
     <div className="comments-container">
 
-      <PostUserCommentForm />
+      <PostUserCommentForm getComments={getComments} />
 
       <DisplayCommentFeed comments={comments} />
 
