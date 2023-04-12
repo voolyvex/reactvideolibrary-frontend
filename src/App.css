@@ -5,18 +5,22 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-  position: relative;
+  box-sizing: border-box;
 }
 
 html {
   box-sizing: border-box;
-  min-height: 50vmax;
+  min-height: 100vh;
   max-height: none;
   font-family: "Monaco", "Open Sans", "Public Sans", "Helvetica", "Lucida Sans",
     "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
   background: linear-gradient(silver, rgb(67, 70, 70), rgb(1, 1, 61), black);
   background-repeat: repeat;
+}
+
+body {
+  margin: 0 0 5rem;
+  min-height: 100vh;
 }
 
 p {

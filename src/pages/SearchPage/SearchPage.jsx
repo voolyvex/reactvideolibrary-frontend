@@ -26,17 +26,22 @@ const SearchPage = (props) => {
 
     return (
         <div className="search-page">
-            <h1 className="search-title">Start your search here</h1>
-            <div className="search-form-container">
-                <form onSubmit={(e) => handleSubmit(e)}>
-                    <input className="search-form"
-                        type='text'
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        value={searchTerm} required={true} />
-                    <button className="search-button" type='submit'><HiArrowNarrowRight /> </button>
-                </form>
+            <div className="search-top-part">
+                <h1 className="search-title">Start your search here!</h1>
+                <div className="search-form-container">
+                    <form onSubmit={(e) => handleSubmit(e)}>
+                        <input className="search-form"
+                            type='text'
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            value={searchTerm} required={true} />
+                        <button className="search-button" type='submit'><HiArrowNarrowRight /> </button>
+                    </form>
+                </div>
             </div>
-            <SearchFeed videos={videos} />
+            <div className="search-bottom-part">
+                <SearchFeed videos={videos} />
+
+            </div>
         </div>
     )
 }

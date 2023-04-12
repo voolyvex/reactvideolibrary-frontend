@@ -2,16 +2,21 @@
   margin-inline: 2%;
   padding-left: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  column-gap: 10%;
 }
-
+.left-column {
+  margin-bottom: 1rem;
+}
 .player {
   padding-left: auto;
   width: 650px;
   display: flex;
 }
 .player-container {
-  height: 590px;
+  min-height: fit-content;
+  height: auto;
+  max-height: 590px;
 }
 .button1 {
   max-height: fit-content;
@@ -30,9 +35,19 @@
   padding-right: auto;
   width: fit-content;
 }
-
+@media screen and (max-width: 1000px) {
+  .related-videos {
+    flex-wrap: wrap;
+  }
+  .player-page {
+    flex-wrap: wrap;
+  }
+}
+  
 .comments {
+  margin-block-start: 2rem;
   display: grid;
-  padding-inline: 10px;
-  max-width: 550px;
+  padding-inline: auto;
+  max-width: inherit;
+  justify-content: center;
 }

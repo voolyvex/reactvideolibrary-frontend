@@ -22,6 +22,7 @@ const PostUserCommentForm = ({ getComments }) => {
             let response = await axios.post(`${URL_HOST}/api/comments/post/`, newCommentObject, { headers: { Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}` } });
             if (response.status === 201){
                 getComments(videoId)
+                setText("");
             }
         } catch (error) {
             console.log(error)
@@ -33,7 +34,7 @@ const PostUserCommentForm = ({ getComments }) => {
     }
     return (
         <div className='form-container'>
-            <h1 className='rel-title'>Comments</h1>
+            <h1 className='com-title'>Comments</h1>
             <form className="comment-form" onSubmit={(e) => handleSubmit(e)}>
                 <label htmlFor="post">
                     <textarea className="form-textarea" name="post" value={text}

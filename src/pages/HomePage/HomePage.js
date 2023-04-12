@@ -9,7 +9,7 @@ const HomePage = () => {
 
   return (
     <div className="container">
-      <h1>Home Page for {user.first_name}!</h1>
+      <h1>Welcome, {user.first_name}!</h1>
     </div>
   );
 };

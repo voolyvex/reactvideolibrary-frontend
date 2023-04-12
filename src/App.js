@@ -25,7 +25,7 @@ import PrivateRoute from "./utils/PrivateRoute";
 
 function App() {
   return (
-    <div>
+    <body>
       <Navbar />
       <Routes>
         <Route
@@ -63,7 +63,7 @@ function App() {
         </Route>
       </Routes>
       <Footer />
-    </div>
+    </body>
   );
 }
 
