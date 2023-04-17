@@ -6,14 +6,15 @@ import "./LoginPage.css";
 
 const LoginPage = () => {
   const { loginUser, isServerError } = useContext(AuthContext);
-  const defaultValues = { username: "", password: "" };
+  const initialValues = { username: "", password: "" };
   const [formData, handleInputChange, handleSubmit, reset] = useCustomForm(
-    defaultValues,
+    initialValues,
     loginUser
   );
 
   useEffect(() => {
     if (isServerError) {
+      console.log("server error.")
       reset();
     }
   }, [isServerError]);

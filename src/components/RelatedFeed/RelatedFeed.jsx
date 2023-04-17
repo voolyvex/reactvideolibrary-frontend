@@ -15,8 +15,8 @@ const RelatedFeed = ({ relatedVideos }) => {
         <div className='rel-feed-container'>
             <h1 className='rel-title'>Related Videos</h1>
             {relatedVideos && relatedVideos.map((video) =>
-                <Link to={`/video/${video.id.videoId}/${video.snippet.title}`}>
-                    <div key={video.id.videoId} className='item' onClick={handleClick} title={video.snippet.title}>
+                <Link key={video.id.videoId} to={`/video/${video.id.videoId}/${video.snippet.title}`}>
+                    <div className='item' onClick={handleClick} title={video.snippet.title}>
                         <img width='250px' src={video.snippet.thumbnails.medium.url} alt={video.snippet.description} />
                         <BsCaretRightFill className='icon' />
                         {video.snippet.title}
