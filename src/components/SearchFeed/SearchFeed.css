@@ -17,8 +17,13 @@
   text-align: left;
   margin: auto;
   padding: auto;
-  font-variant: small-caps;
-  font-size: large;
+  font-variant: normal;
+  font-size: medium;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.search-title:hover {
+  opacity: .98;
 }
 .search-form-container {
   display: inline;

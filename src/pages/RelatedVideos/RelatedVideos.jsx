@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { KEY } from '../../localKey'
 import RelatedFeed from '../../components/RelatedFeed/RelatedFeed';
 import axios from 'axios';
 import '../VideoPage/VideoPage.css'
@@ -16,7 +15,7 @@ const RelatedVideos = () => {
             try {
                 await axios
                     .get(
-                        `https://www.googleapis.com/youtube/v3/search?type=video&relatedToVideoId=${videoId}&part=snippet&key=${KEY}&maxResults=7`)
+                        `https://www.googleapis.com/youtube/v3/search?type=video&relatedToVideoId=${videoId}&part=snippet&key=${process.env.REACT_APP_YT_API_KEY}&maxResults=7`)
                     .then(response => setRelatedVideos(response.data.items));
             } catch (error) {
                 console.log(error);
