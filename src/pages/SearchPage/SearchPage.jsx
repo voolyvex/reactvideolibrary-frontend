@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { KEY } from "../../localKey";
 import SearchFeed from "../../components/SearchFeed/SearchFeed";
 import '../../components/SearchFeed/SearchFeed.css'
 import { HiArrowNarrowRight } from "react-icons/hi";
@@ -17,7 +16,7 @@ const SearchPage = (props) => {
         try {
             await axios
                 .get(
-                    `https://www.googleapis.com/youtube/v3/search?q=${searchTerm}&key=${KEY}&part=snippet&type=video&maxResults=12`)
+                    `https://www.googleapis.com/youtube/v3/search?q=${searchTerm}&key=${process.env.REACT_APP_YT_API_KEY}&part=snippet&type=video&maxResults=12`)
                 .then(response => setVideos(response.data.items));
         } catch (error) {
             console.log(error);
