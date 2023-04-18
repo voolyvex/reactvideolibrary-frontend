@@ -26,7 +26,7 @@ const SearchPage = (props) => {
     return (
         <div className="search-page">
             <div className="search-top-part">
-                <h1 className="search-title">Search YouTube here!</h1>
+                <h1 className="search-title">Search</h1>
                 <div className="search-form-container">
                     <form onSubmit={(e) => handleSubmit(e)}>
                         <input className="search-form"
